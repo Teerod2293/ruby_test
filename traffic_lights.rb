@@ -7,7 +7,7 @@ def traffic_lights(color)
     when "yellow"
       p "Ждать!"
     else
-      if !["green", "red","yellow"].include?(user_input) 
+      if !["green", "red","yellow"].include?(color) 
       p "Этого цвета нет в светофоре! Попробуйте другой." 
       end
   end
