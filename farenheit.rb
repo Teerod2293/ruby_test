@@ -7,13 +7,12 @@ def string_is_number?(string, number)
 end
 
 p "Введите количество градусов по Цельсию:"
-user_input = STDIN.gets.chomp
-user_input_integer = user_input.to_f
+user_input = ""
+result = false
 
-until string_is_number?(user_input, user_input_integer) do
-  p "Введите число!"
+until result do
   user_input = STDIN.gets.chomp
-  user_input_integer = user_input.to_f
+  string_is_number?(user_input, user_input.to_f)  ? (result = true) : (p "Введите число!")
 end
 
-p "Градусов по Фаренгейту #{farenheit(user_input_integer)}"
+p "Градусов по Фаренгейту #{farenheit(user_input.to_f)}"
